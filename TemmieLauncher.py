@@ -5,12 +5,12 @@ import subprocess #pip install subprocess
 
 minecraft_directory = minecraft_launcher_lib.utils.get_minecraft_directory().replace('Minecraft', 'Данное творение лаунчеров под GNU/Linux создан челом под псевдонимом Temmie!')
 
-print('████████╗███████╗███╗   ███╗██╗      █████╗ ██╗   ██╗███╗   ██╗ ██████╗███████╗██╗  ██╗██████╗ ') 
-print('╚══██╔══╝██╔════╝████╗ ████║██║     ██╔══██╗██║   ██║████╗  ██║██╔════╝██╔════╝██║  ██║██╔══██╗')
-print('   ██║   █████╗  ██╔████╔██║██║     ███████║██║   ██║██╔██╗ ██║██║     █████╗  ███████║██████╔╝')
-print('   ██║   ██╔══╝  ██║╚██╔╝██║██║     ██╔══██║██║   ██║██║╚██╗██║██║     ██╔══╝  ██╔══██║██╔══██╗') #/dev/sdb2/home/administrator/MClauncher.py (Ubuntu)
-print('   ██║   ███████╗██║ ╚═╝ ██║███████╗██║  ██║╚██████╔╝██║ ╚████║╚██████╗███████╗██║  ██║██║  ██║') #/dev/sda2/home/fuckel/TemmieLauncher.py 
-print('   ╚═╝   ╚══════╝╚═╝     ╚═╝╚══════╝╚═╝  ╚═╝ ╚═════╝ ╚═╝  ╚═══╝ ╚═════╝╚══════╝╚═╝  ╚═╝╚═╝  ╚═╝')
+print('████████╗███████╗███╗   ███╗███╗   ███╗██╗███████╗██╗      █████╗ ██╗   ██╗███╗   ██╗ ██████╗██╗  ██╗███████╗██████╗ ') #TemmieLauncehr
+print('╚══██╔══╝██╔════╝████╗ ████║████╗ ████║██║██╔════╝██║     ██╔══██╗██║   ██║████╗  ██║██╔════╝██║  ██║██╔════╝██╔══██╗')
+print('   ██║   █████╗  ██╔████╔██║██╔████╔██║██║█████╗  ██║     ███████║██║   ██║██╔██╗ ██║██║     ███████║█████╗  ██████╔╝')
+print('   ██║   ██╔══╝  ██║╚██╔╝██║██║╚██╔╝██║██║██╔══╝  ██║     ██╔══██║██║   ██║██║╚██╗██║██║     ██╔══██║██╔══╝  ██╔══██╗') #/dev/sdb2/home/administrator/MClauncher.py (Ubuntu)
+print('   ██║   ███████╗██║ ╚═╝ ██║██║ ╚═╝ ██║██║███████╗███████╗██║  ██║╚██████╔╝██║ ╚████║╚██████╗██║  ██║███████╗██║  ██║') #/dev/sda2/home/fuckel/TemmieLauncher.py (EndeavourOS -- основная система)
+print('   ╚═╝   ╚══════╝╚═╝     ╚═╝╚═╝     ╚═╝╚═╝╚══════╝╚══════╝╚═╝  ╚═╝ ╚═════╝ ╚═╝  ╚═══╝ ╚═════╝╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝')
 print('    __  ____                            ______     __                           __                 ____           __    _                 ')
 print('   /  |/  (_)___  ___  ______________ _/ __/ /_   / /   ____ ___  ______  _____/ /_  ___  _____   / __ \____     / /   (_)___  __  ___  __')
 print('  / /|_/ / / __ \/ _ \/ ___/ ___/ __ `/ /_/ __/  / /   / __ `/ / / / __ \/ ___/ __ \/ _ \/ ___/  / / / / __ \   / /   / / __ \/ / / / |/_/')
@@ -23,15 +23,15 @@ def printProgressBar(iteration, total, prefix='', suffix='', decimals=1, length=
     filledLength = int(length * iteration // total)
     bar = fill * filledLength + '-' * (length - filledLength)
     print('\r%s |%s| %s%% %s' % (prefix, bar, percent, suffix), end=printEnd)
-    if iteration == total:
-        print()
+    if iteration == total:[]
+    print()
 
 def maximum(max_value, value):
     max_value[0] = value
 
 version = input('Какая тебе нужна версия?: ')
 username = input('Какой твой никнейм?: ')
-modloader = input('(BETA) Какой тебе нужен ModLoader?: ')
+#modloader = input('(НЕ РАБОАЕТ) Какой тебе нужен ModLoader?: ')
 
 
 print('=======================================================================================')
@@ -44,7 +44,7 @@ callback = {
         "setMax": lambda value: maximum(max_value, value)
 }
 
-minecraft_launcher_lib.install.install_minecraft_version(version=version, minecraft_directory=minecraft_directory, callback=callback, modloader=modloader)
+minecraft_launcher_lib.install.install_minecraft_version(version=version, minecraft_directory=minecraft_directory, callback=callback,)
 
 options = {
     'username': username,
